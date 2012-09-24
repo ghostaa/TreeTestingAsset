@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="GB18030"?>
+<XUI xmlns="http://btt.cn.ibm.com/xui/2.0" bounds="191,44,400,300" dataBinding="{'ctxType':'proc','ctxFile':'TestingTreeFlow','ctxName':'TestingTreeCtx'}" isRuleDirty="false">
+  <styles/>
+  <container name="Panel" id="panel">
+    <gridData heightHint="379" verticalAlignment="1" widthHint="178"/>
+    <container name="Form" id="form">
+      <gridData heightHint="327" verticalAlignment="1" widthHint="170"/>
+      <widget name="Button" action="flowEvent=homepage" id="button" text="homepage">
+        <gridData/>
+      </widget>
+      <container name="Group" id="group" text="Group">
+        <gridData heightHint="145" verticalAlignment="1" widthHint="162"/>
+        <widget name="Tree" dataNameForTreeContent="root" id="tree">
+          <gridData/>
+        </widget>
+        <gridLayout numColumns="1"/>
+      </container>
+      <container name="Group" id="group01" text="Group">
+        <gridData heightHint="145" verticalAlignment="1" widthHint="162"/>
+        <widget name="Tree" dataNameForTreeContent="root" id="tree_copy">
+          <gridData/>
+        </widget>
+        <gridLayout numColumns="1"/>
+      </container>
+      <gridLayout numColumns="1"/>
+    </container>
+    <gridLayout numColumns="1"/>
+  </container>
+  <rules/>
+  <groups/>
+</XUI>

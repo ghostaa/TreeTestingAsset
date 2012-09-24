@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CreateTreeDataOp>
+
+	<operation id="CreateTreeDataOp" implClass="com.ghost.CreateTreeData"/>
+
+	<context id="CreateTreeDataCtx" type="op">
+		<refKColl refId="CreateTreeDataRecord"/>
+	</context>
+
+	<kColl id="CreateTreeDataRecord">
+		<treeModel id="root">
+		</treeModel>
+	</kColl>
+
+</CreateTreeDataOp>

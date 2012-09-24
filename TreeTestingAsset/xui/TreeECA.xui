@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="GB18030"?>
+<XUI xmlns="http://btt.cn.ibm.com/xui/2.0" bounds="255,108,400,300" dataBinding="{'ctxType':'proc','ctxFile':'TestingTreeFlow','ctxName':'TestingTreeCtx'}" isRuleDirty="false" extraInfo="{'lastGeneratedRuleFile':'TreeECA.js'}">
+  <styles/>
+  <container name="Panel" id="panel">
+    <gridData heightHint="296" verticalAlignment="1" widthHint="238"/>
+    <container name="Form" id="form">
+      <gridData heightHint="263" verticalAlignment="1" widthHint="230"/>
+      <widget name="Button" action="flowEvent=homepage" id="button" text="homepage">
+        <gridData/>
+      </widget>
+      <widget name="Tree" dataNameForTreeContent="root" id="tree">
+        <gridData/>
+      </widget>
+      <container name="Panel" id="panel01">
+        <gridData heightHint="33" verticalAlignment="1" widthHint="222"/>
+        <widget name="Button" id="visible" buttonType="button" text="visible">
+          <gridData/>
+        </widget>
+        <widget name="Button" id="hidden" buttonType="button" text="hidden">
+          <gridData/>
+        </widget>
+        <widget name="Button" id="gone" buttonType="button" text="gone">
+          <gridData/>
+        </widget>
+        <gridLayout numColumns="3"/>
+      </container>
+      <widget name="PlaceHolder">
+        <gridData heightHint="20" horizontalAlignment="4" verticalAlignment="4" widthHint="20"/>
+      </widget>
+      <widget name="Button" id="verify tree id" buttonType="button" text="verify tree id">
+        <gridData/>
+      </widget>
+      <widget name="Button" id="get tree id" buttonType="button" text="get tree id">
+        <gridData/>
+      </widget>
+      <gridLayout numColumns="1"/>
+    </container>
+    <widget name="Message" id="message">
+      <gridData/>
+    </widget>
+    <gridLayout numColumns="1"/>
+  </container>
+  <rules>
+    <rule name="ecaRule">
+      <events>
+        <event widget="visible" event="onClick"/>
+      </events>
+      <trueActions>
+        <action type="widgetProperty" widget="tree" property="visibility">
+          <value type="constant" constant="'visible'"/>
+        </action>
+      </trueActions>
+      <falseActions/>
+    </rule>
+    <rule name="ecaRule01">
+      <events>
+        <event widget="hidden" event="onClick"/>
+      </events>
+      <trueActions>
+        <action type="widgetProperty" widget="tree" property="visibility">
+          <value type="constant" constant="'hidden'"/>
+        </action>
+      </trueActions>
+      <falseActions/>
+    </rule>
+    <rule name="ecaRule02">
+      <events>
+        <event widget="gone" event="onClick"/>
+      </events>
+      <trueActions>
+        <action type="widgetProperty" widget="tree" property="visibility">
+          <value type="constant" constant="'gone'"/>
+        </action>
+      </trueActions>
+      <falseActions/>
+    </rule>
+    <rule name="ecaRule03">
+      <events>
+        <event widget="verify tree id" event="onClick"/>
+      </events>
+      <condition>
+        <value type="expression">
+          <leftValue type="widgetProperty" widget="tree" property="id"/>
+          <operator name="=="/>
+          <rightValue type="constant" constant="'TreeECA_tree'"/>
+        </value>
+      </condition>
+      <trueActions>
+        <action type="widgetFunction" widget="message">
+          <function name="display">
+            <parameter>
+              <value type="constant" constant="'ID of the tree is TreeECA_tree'"/>
+            </parameter>
+          </function>
+        </action>
+      </trueActions>
+      <falseActions>
+        <action type="widgetFunction" widget="message">
+          <function name="display">
+            <parameter>
+              <value type="constant" constant="'ID of the tree is  not TreeECA_tree'"/>
+            </parameter>
+          </function>
+        </action>
+      </falseActions>
+    </rule>
+    <rule name="ecaRule04">
+      <events>
+        <event widget="get tree id" event="onClick"/>
+      </events>
+      <trueActions>
+        <action type="widgetFunction" widget="message">
+          <function name="display">
+            <parameter>
+              <value type="widgetProperty" widget="tree" property="id"/>
+            </parameter>
+          </function>
+        </action>
+      </trueActions>
+      <falseActions/>
+    </rule>
+  </rules>
+  <groups/>
+</XUI>

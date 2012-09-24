@@ -1,0 +1,172 @@
+<html>
+    <head>
+        <META HTTP-EQUIV="Content-Type" content="text/html; charset=utf-8"/>
+        <link rel="stylesheet" href="report.css"/>
+        <title>Generate Dojo Pages Report</title>
+        <script language="javascript">
+            function outliner () {
+                oMe = window.event.srcElement
+                //get child element
+                var child = document.all[event.srcElement.getAttribute("child",false)];
+                //if child element exists, expand or collapse it.
+                if (null != child)
+                    child.className = child.className == "collapsed" ? "expanded" : "collapsed";
+            }
+            
+            function Unicode2oStr(str){
+				var re=/&#[\da-fA-F]{1,5};/ig;
+				var arr=str.match(re);
+				if(arr==null)return("");
+				for(var i=0;i<arr.length;i++){
+				  arr[i]=String.fromCharCode(arr[i].replace(/[&#;]/g,""));
+				}
+				return(arr.toString().replace(/,/g,""))
+			} 
+
+            function changepic(obj, index) {
+                var check = obj.src.toLowerCase();
+                var tr = document.getElementById("tr"+index);
+                if (check.lastIndexOf("report_plus.gif") != -1)
+                {
+                    obj.src = "report_minus.gif"
+                    tr.style.display = "";
+                }
+                else
+                {
+                    obj.src = "report_plus.gif"
+                    tr.style.display = "none";
+                }
+            }
+        </script>
+    </head>
+    <body topmargin="0" leftmargin="0" rightmargin="0" >
+    
+        <!-- 25394 h1 _locID="ConversionReport">Generate Dojo Pages - Report</h1 -->
+        
+        	 
+	        <p><span class="note">
+	        <b>Report Time:</b>  2012-09-22 05:22:05<br/>
+	        </span></p>
+        	  
+       		  <table cellpadding="2" cellspacing="0" width="98%" border="1" bordercolor="white" class="infotable">
+		            <tr>
+		                <td nowrap="1" width="34%" class="header">File Name</td>
+		                <td nowrap="1" width="15%" class="header">Status</td>
+		                <td nowrap="1" width="13%" class="header">Errors</td>
+		                <td nowrap="1" width="13%" class="header">Warnings</td>
+		                <td nowrap="1" width="25%" class="header">Time</td>
+		            </tr>
+	                
+	                
+	                
+	                
+						
+						
+							
+							                     
+	                    
+	                        
+			                
+			                
+			                
+		                    
+		                    
+			             
+	                     
+	                     
+	                     
+	                    
+	                               
+	                
+						
+						
+							
+							                     
+	                    
+	                        
+		                        <tr class="row" >
+				                    <td class="content">
+				                    	
+				                        BP31706.xui
+				                    </td>
+				                    <td class="content">
+				                    
+				                       
+				                       Success
+				                    
+				                    </td>
+				                    <td class="content">0</td>
+				                    <td class="content">0</td>
+				                    <td class="content">2012-09-22 05:22:05</td>
+					            </tr>
+					            <!-- 25375 -->
+					            
+		                    
+			                
+			                
+			                
+		                    
+		                    
+			             
+	                     
+	                     
+	                     
+	                    
+	                               
+	                
+						
+						
+						
+						
+						
+							                     
+	                    
+	                        
+		                        <tr class="row" >
+				                    <td class="content">
+				                    	
+				                        BP31707.xui
+				                    </td>
+				                    <td class="content">
+				                    
+				                       
+				                       Success
+				                    
+				                    </td>
+				                    <td class="content">0</td>
+				                    <td class="content">0</td>
+				                    <td class="content">2012-09-22 05:22:05</td>
+					            </tr>
+					            <!-- 25375 -->
+					            
+		                    
+			                
+			                
+			                
+		                    
+		                    
+			             
+	                     
+	                     
+	                     
+	                         
+	                     
+	                    
+	                               
+	                
+		                <tr valign="top">
+				            <td class="foot">
+				                
+				            </td>
+				            <td class="foot">
+						        Success: 2<BR/>
+						        Fail: 0
+				            </td>
+				            <td class="foot">0</td>
+				            <td class="foot">0</td>
+				            <td class="foot"></td>
+				        </tr>  
+       			 </table>
+    </body>
+</html>
+

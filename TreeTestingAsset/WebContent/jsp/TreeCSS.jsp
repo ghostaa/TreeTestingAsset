@@ -6,7 +6,7 @@
 	%>
 </jsp:useBean>	
 <html>
-<!-- Generated from TreeCSS.xui by ghost, on Sat Sep 22 19:54:46 CST 2012 -->
+<!-- Generated from TreeCSS.xui by ghost, on Tue Jan 29 16:25:38 CST 2013 -->
 <head>
 <%@ taglib uri="/WEB-INF/bttdojo.tld" prefix="bttdojo"%>
 <%@ page import="com.ibm.btt.cs.html.JSPUtil" %> 
@@ -23,6 +23,7 @@
 @import "js/com/ibm/btt/dijit/templates/ScreenCover.css";
 @import "js/com/ibm/btt/dijit/templates/Group.css";
 @import "js/com/ibm/btt/dijit/templates/Label.css";
+@import "css/tree.css";
 
 .dojoxGrid table { margin: 0; }
 .dj_gecko .dijitTextBoxReadOnly INPUT.dijitInputInner {
@@ -63,33 +64,33 @@ dojo.addOnLoad(function(){
 <body class="claro" style="visibility:hidden">
   <table id="TreeCSS_panel">
     <tr>
-      <td valign="top">
+      <td style="text-align:left;vertical-align:top;">
         <bttdojo:form id="TreeCSS_form" errorPage="TreeCSS.jsp">
-          <table id="TreeCSS_form">
+          <table>
             <tr>
-              <td>
+              <td style="text-align:left;vertical-align:middle;">
                 <bttdojo:button id="TreeCSS_button" type="submit" text="homepage" flowEvent="homepage"/>
               </td>
             </tr>
             <tr>
-              <td valign="top">
+              <td style="text-align:left;vertical-align:top;">
                 <bttdojo:group id="TreeCSS_group" text="Group">
-                  <table id="TreeCSS_group">
+                  <table>
                     <tr>
-                      <td>
-                        <bttdojo:tree id="TreeCSS_tree" dataNameForTreeContent="root"/>
-                      </td>
+                      <td style="text-align:left;vertical-align:middle;">
+<div style="display:inline-block;" class="treeStyle">                        <bttdojo:tree id="TreeCSS_tree" dataNameForTreeContent="root"/>
+</div>                      </td>
                     </tr>
                   </table>
                 </bttdojo:group>
               </td>
             </tr>
             <tr>
-              <td valign="top">
+              <td style="text-align:left;vertical-align:top;">
                 <bttdojo:group id="TreeCSS_group01" text="Group">
-                  <table id="TreeCSS_group01">
+                  <table>
                     <tr>
-                      <td>
+                      <td style="text-align:left;vertical-align:middle;">
                         <bttdojo:tree id="TreeCSS_tree_copy" dataNameForTreeContent="root"/>
                       </td>
                     </tr>

@@ -15,7 +15,7 @@
 			</transitions>
 		</htmlState>
 
-		<htmlState typeIdInfo="OK" id="OK" type="final"/>
+		<htmlState typeIdInfo="OK" id="OK" type="final" finalPage="index.jsp"/>
 
 		<operationState typeIdInfo="CreateTreeDataOp" id="CreateTreeDataOp" type="operation">
 			<transitions>
@@ -26,7 +26,6 @@
 		<htmlState type="page" typeIdInfo="tree.jsp" id="tree-1">
 			<transitions>
 				<htmlTransition id="tree-1.submit" targetState="tree"/>
-				<htmlTransition id="tree-1.homepage" targetState="OK"/>
 			</transitions>
 		</htmlState>
 
